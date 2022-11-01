@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body
+{
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+
+.heading
+{
+    font-size: 20px;
+    margin: 30px;
+}
+
+input
+{
+    margin: 20px;
+    padding: 10px;
+}
+
+.inputs h3
+{
+    margin-bottom: 20px;
+}
+
+button
+{
+    padding: 10px;
+}

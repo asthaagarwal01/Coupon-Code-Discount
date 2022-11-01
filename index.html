@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coupon Code Discount
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="heading">
+            <h2>COUPON CODE DISCOUNT BILLING</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" name="" id="price" placeholder="Enter price">
+            <br><br>
+            <h3>AVAILABLE COUPONS</h3>
+            <div class="list">
+                <ul>
+                    <li>FESTIVE : 10% OFF above Rs. 300</li>
+                    <li>SUPER : 25% OFF above Rs. 500</li>
+                    <li>WELCOME : 50% OFF above Rs. 1000</li>
+                </ul>
+    
+            </div>
+            <input type="text" name="" id="coupon" placeholder="Enter coupon code" >
+            <br><br>
+            <button onclick="calculate()">Get total</button>
+            <br><br>
+            <input readonly id="bill">
+            <br><br>
+        </div>
+
+       
+        <script type="text/javascript">
+            function calculate()
+                {
+                    var a = document.getElementById("price").value ;
+                    var b = document.getElementById("coupon").value ;
+                    var dis=0;
+                    var total=0;
+                    if(b=="FESTIVE" && a>=300)
+                    {
+                        dis=(a*10)/100;
+                    }
+                    else if(b=="WELCOME" && a>=1000)
+                    {
+                        dis=(a*50)/100;
+                    }
+                    else if(b=="SUPER" && a>=500)
+                    {
+                        dis=(a*25)/100;
+                    }
+                    else
+                    {
+                        d=0;
+                    
+                    }
+                    total=a-dis;
+                    if(d!=0)
+                    document.getElementById("bill").value=total;
+                    else
+                    {
+                        document.getElementById("bill").value=total;
+                        document.write("<br>")
+                    document.write("COUPON NOT APPLICABLE");
+                    }
+                }
+            
+        </script>
+    </body>
+</html>
